@@ -13,6 +13,7 @@ steps:
 - script: |
     sudo apt-get install pandoc
     sudo apt-get install make
+    sudo apt-get install texlive-fonts-recommended texlive-xetex
   displayName: 'Installing pandoc'
 - script: 
     make
