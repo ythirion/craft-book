@@ -11,8 +11,8 @@ pool:
 
 steps:
 - script: |
-    apt-get install pandoc
-    apt-get install make
+    sudo apt-get install pandoc
+    sudo apt-get install make
   displayName: 'Installing pandoc'
 - script: 
     sudo pandoc -o book.epub metadata.txt chapters/*.md --table-of-contents
