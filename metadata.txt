@@ -1,9 +1,9 @@
 ---
-title: My book title
-author: Daniel Herzog
+title: Leçons des Dev à destination des honnêtes gens
+author: A lot, we hope
 rights: MIT License
-language: en-US
-tags: [book, my-book, etc]
+language: fr-FR
+tags: [book, dev, craft]
 abstract: |
   Your summary.
 mainfont: DejaVu Sans
