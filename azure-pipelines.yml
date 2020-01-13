@@ -15,11 +15,11 @@ steps:
     sudo apt-get install make
   displayName: 'Installing pandoc'
 - script: 
-    sudo pandoc -o book.epub metadata.txt chapters/*.md --table-of-contents
-  displayName: 'Building epub'
+    make
+  displayName: 'Building files'
 - task: CopyFiles@2
   inputs:
-    contents: 'book.epub'
+    contents: 'output/**'
     targetFolder: $(Build.ArtifactStagingDirectory)
 - task: PublishBuildArtifacts@1
   inputs:

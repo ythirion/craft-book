@@ -5,7 +5,7 @@
 BUILD = build
 MAKEFILE = Makefile
 OUTPUT_FILENAME = book
-METADATA = metadata.yml
+METADATA = metadata.txt
 CHAPTERS = chapters/*.md
 TOC = --toc --toc-depth=2
 IMAGES_FOLDER = images
@@ -14,9 +14,9 @@ COVER_IMAGE = $(IMAGES_FOLDER)/cover.png
 MATH_FORMULAS = --webtex
 CSS_FILE = style.css
 CSS_ARG = --css=$(CSS_FILE)
-METADATA_ARG = --metadata-file=$(METADATA)
+METADATA_ARG = $(METADATA)
 ARGS = $(TOC) $(MATH_FORMULAS) $(CSS_ARG) $(METADATA_ARG)
-PDF_ARGS = -V geometry:margin=1in -V documentclass=report --pdf-engine=xelatex
+PDF_ARGS = -V geometry:margin=1in -V documentclass=report --latex-engine=xelatex
 
 ####################################################################################################
 # Basic actions
