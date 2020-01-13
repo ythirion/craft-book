@@ -17,3 +17,11 @@ steps:
 - script: 
     sudo pandoc -o book.epub metadata.txt chapters/*.md --table-of-contents
   displayName: 'Building epub'
+- task: CopyFiles@2
+  inputs:
+    contents: 'book.epub'
+    targetFolder: $(Build.ArtifactStagingDirectory)
+- task: PublishBuildArtifacts@1
+  inputs:
+    pathToPublish: $(Build.ArtifactStagingDirectory)
+    artifactName: Book
