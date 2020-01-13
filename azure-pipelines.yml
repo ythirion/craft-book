@@ -20,7 +20,7 @@ steps:
   displayName: 'Building files'
 - task: CopyFiles@2
   inputs:
-    contents: 'output/**'
+    contents: 'build/**'
     targetFolder: $(Build.ArtifactStagingDirectory)
 - task: PublishBuildArtifacts@1
   inputs:
